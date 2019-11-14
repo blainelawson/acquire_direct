@@ -1,0 +1,9 @@
+Q1:
+
+index is placement on x-axis
+
+iterate over given array |col1|
+
+    iterate over remainder of outer array |col2|
+        x_axis = array[n2] - array[n1]     //Gets the length of x axis
+        water_amt = x_axis * shorter of two array[n]
