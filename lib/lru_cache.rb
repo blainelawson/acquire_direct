@@ -15,13 +15,12 @@ class LruCache
     end
 
     def put(k, v)
-        if !self.entries.keys.include?(k)
-            self.entries.delete(self.lru.pop) if (self.entries.length + 1) > self.cap
-            
-            self.entries[k] = v
-
-            update_lru(k)
+        if !self.entries.keys.include?(k) && (self.entries.length + 1) > self.cap
+            self.entries.delete(self.lru.pop) 
         end
+
+        self.entries[k] = v
+        update_lru(k)
     end
 
     def get(k)
