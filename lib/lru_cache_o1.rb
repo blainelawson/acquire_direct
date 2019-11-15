@@ -9,6 +9,7 @@ class LruCacheO1
     def initialize(cap = 2)
         @cap = cap
         @entries = {}
+        @lru = []
 
         @@all << self
     end
