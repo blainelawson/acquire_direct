@@ -15,12 +15,13 @@ class LruCacheO1
 
     def put(k, v)
         if !self.entries.has_key?(k)
-            self.entries.delete(self.lru.pop) if (self.entries.length + 1) > self.cap
-            
-            self.entries[k] = v
-
-            update_lru(k)
+            if (self.entries.length + 1) > self.cap
+                self.entries.delete(self.lru.pop) 
+            end        
         end
+
+        self.entries[k] = v
+        update_lru(k)
     end
 
     def get(k)
