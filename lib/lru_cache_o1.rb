@@ -9,14 +9,12 @@ class LruCacheO1
     def initialize(cap = 2)
         @cap = cap
         @entries = {}
-        @lru = []
 
         @@all << self
     end
 
     def put(k, v)
         if !self.entries.has_key?(k)
-            # binding.pry
             self.entries.delete(self.lru.pop) if (self.entries.length + 1) > self.cap
             
             self.entries[k] = v
