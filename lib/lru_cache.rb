@@ -6,7 +6,7 @@ class LruCache
 
     @@all = []
 
-    def initialize(cap = 6)
+    def initialize(cap = 2)
         @cap = cap
         @entries = {}
         @lru = []
