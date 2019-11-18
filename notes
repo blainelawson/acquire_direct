@@ -7,3 +7,21 @@ iterate over given array |col1|
     iterate over remainder of outer array |col2|
         x_axis = array[n2] - array[n1]     //Gets the length of x axis
         water_amt = x_axis * shorter of two array[n]
+
+
+
+
+
+
+Q3:
+
+Cap 3
+first is oldest, last is newest
+{ 1: 1, 2: 2, 3: 3, 4: 4, 5: 5 }
+
+upon get of existing element, delete element and add duplicate element to hash
+
+$ get(2)
+
+
+
