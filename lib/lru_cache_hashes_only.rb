@@ -1,6 +1,6 @@
 require 'pry'
 
-class LruCacheO1
+class LruCacheHashesOnly
     attr_accessor :put, :entries, :lru
     attr_reader :get, :cap
 
@@ -41,7 +41,7 @@ class LruCacheO1
     end
 end
 
-cache = LruCacheO1.new(2)
+cache = LruCacheHashesOnly.new(2)
 cache.put(1,1)
 cache.put(2,2)
 cache.get(1)

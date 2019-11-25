@@ -4,3 +4,8 @@ source "https://rubygems.org"
 gem 'pry'
 
 gem 'byebug'
+
+gem 'rspec'
+
+# For RSpec testing
+gem 'complexity_assert', :group => [:test]
